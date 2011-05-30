@@ -1,0 +1,14 @@
+0 chips
+0 water
+0 beer
+1 coconuts
+1 water
+1 nuts
+2 nuts
+2 coconuts
+2 chips
+2 coconuts
+2 water
+3 coconuts
+3 nuts
+3 coconuts
