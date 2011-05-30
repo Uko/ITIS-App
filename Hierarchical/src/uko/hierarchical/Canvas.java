@@ -26,10 +26,9 @@ public class Canvas extends JPanel
 	@Override
 	public void paint(Graphics grphcs)
 	{
-		Dimension d = getSize();
 		super.paint(grphcs);
-		Image offscreen = createImage(d.width, d.height);
-		Graphics2D g2 = (Graphics2D) offscreen.getGraphics();
+		Dimension d = getSize();
+		Graphics2D g2 = (Graphics2D) grphcs;
 		g2.setColor(getBackground());
 		g2.fillRect(0, 0, d.width, d.height);
 		g2.setColor(getForeground());
@@ -47,7 +46,6 @@ public class Canvas extends JPanel
 				g2.fill(new Ellipse2D.Double(j.getX()-4, j.getY()-4, 7, 7));
 			}
 		}
-		grphcs.drawImage(offscreen, 0, 0, this);
 	}
 	/**
 	 * @return the model
