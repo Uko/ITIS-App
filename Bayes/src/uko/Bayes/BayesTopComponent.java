@@ -5,6 +5,8 @@
 package uko.Bayes;
 
 import javax.swing.ComboBoxModel;
+import javax.swing.event.ListDataListener;
+import javax.swing.table.DefaultTableModel;
 import org.openide.util.NbBundle;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
@@ -85,7 +87,7 @@ public final class BayesTopComponent extends TopComponent
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
+                        .addGap(96, 96, 96)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -94,9 +96,9 @@ public final class BayesTopComponent extends TopComponent
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(60, 60, 60)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -108,7 +110,53 @@ public final class BayesTopComponent extends TopComponent
 	{
 		abstract public ComboBoxModel get();
 	}
-	private class ComboBoxSex ex
+	/*private class ComboBoxSex extends ComboBox
+	{
+		@Override
+		public ComboBoxModel get()
+		{
+			ComboBoxModel result = new myComboBoxModel();
+			for(int i=0; i<table.getRowCount(); i++)
+				//result.((DefaultTableModel)table.getModel()).getValueAt(i, 0);
+		}
+		
+	}*/
+	
+	private class myComboBoxModel implements ComboBoxModel
+	{
+		@Override
+		public void setSelectedItem(Object o)
+		{
+			throw new UnsupportedOperationException("Not supported yet.");
+		}
+		@Override
+		public Object getSelectedItem()
+		{
+			throw new UnsupportedOperationException("Not supported yet.");
+		}
+		@Override
+		public int getSize()
+		{
+			throw new UnsupportedOperationException("Not supported yet.");
+		}
+		@Override
+		public Object getElementAt(int i)
+		{
+			throw new UnsupportedOperationException("Not supported yet.");
+		}
+		@Override
+		public void addListDataListener(ListDataListener ll)
+		{
+			throw new UnsupportedOperationException("Not supported yet.");
+		}
+		@Override
+		public void removeListDataListener(ListDataListener ll)
+		{
+			throw new UnsupportedOperationException("Not supported yet.");
+		}
+		
+	}
+	
 	@Override
 	public void componentOpened()
 	{
