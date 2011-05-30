@@ -76,6 +76,11 @@ public final class HierarchicalTopComponent extends TopComponent
         });
 
         org.openide.awt.Mnemonics.setLocalizedText(jButton2, org.openide.util.NbBundle.getMessage(HierarchicalTopComponent.class, "HierarchicalTopComponent.jButton2.text")); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -115,6 +120,12 @@ public final class HierarchicalTopComponent extends TopComponent
 		canvas.getModel().aglomerate();
 		canvas.repaint();
 	}//GEN-LAST:event_jButton1ActionPerformed
+
+	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton2ActionPerformed
+	{//GEN-HEADEREND:event_jButton2ActionPerformed
+		canvas.getModel().devimizate();
+		canvas.repaint();
+	}//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private uko.hierarchical.Canvas canvas;
